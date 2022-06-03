@@ -26,7 +26,7 @@ header {
     background-attachment: fixed;
     display: block;
     width: 50em;
-    margin-right: 3em;
+    margin-right: 1.5em;
     color: #ffff;
 }
 
@@ -129,6 +129,9 @@ article > h1 {
 }
 
 @media (max-width: 1000px) {
+    nav {
+        max-width: 175px;
+    }
     nav > h1 {
         columns: 2;
         margin-left: 0.5em;  
@@ -184,7 +187,7 @@ article > h1 {
     }
 
     main {
-        font-size: 90%;
+        font-size: 95%;
     }
 }
 
@@ -251,9 +254,8 @@ article > h1 {
     }
 
 
-
     main {
-        font-size: 70%;
+        font-size: 85%;
     }
 }
 
@@ -272,15 +274,19 @@ article > h1 {
     }
 
     #header {
+        background-color: var(--cor2);
+        background-image: none;
+        text-align: center;
         position: fixed;
-        box-sizing: border-box;
-        height: 70px;
+        margin: 0 auto;
+        position: fixed;
+        justify-content: center;
+        height: 75px;
         width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
-        background: var(--cor3);
+        padding: 0px;
     }
 
     #menu {
@@ -290,22 +296,10 @@ article > h1 {
         padding: 0px;
         justify-content: center;
         display: flex;
-        gap: 0.8rem;
+        gap: auto;
         list-style: none;
     }
 
-    #header {
-        background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-        background-attachment: fixed;
-        margin: 0 auto;
-        padding: 0px;
-        position: fixed;
-        height: 75px;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
     
     nav {
         margin: 0 auto;
@@ -316,9 +310,21 @@ article > h1 {
     }
 
     #logo {
-        justify-content: center;
-        margin: 35px auto auto;
-        text-align: center;
+        columns: 1;
+        width: 50px;
+        margin: auto;
+        padding: auto;
+        font-weight: 400;
+    }
+
+    #menu {
+        height: 15px;
+        gap: 3em;
+        display: flex;
+        margin: 13px auto 0px;
+        font-size: 95%;
+        font-weight: 300;
+
     }
 
     article > a > img {
@@ -329,6 +335,16 @@ article > h1 {
         height: auto;
         border-radius: 25px;
     }
+}
+
+@media (max-width: 370px) {
+    #menu {
+        height: 15px;
+        gap: 2em;
+        margin: 13px auto 0px;
+        font-size: 95%;
+    }
+
 }
 
 @media (max-width: 320px) {
@@ -342,8 +358,6 @@ article > h1 {
     }
 
     #header {
-        background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-        background-attachment: fixed;
         margin: 0 auto;
         padding: 0px;
         position: fixed;
@@ -354,17 +368,11 @@ article > h1 {
         justify-content: center;
     }
     
-    nav {
-        margin: 0 auto;
-        width: 20vw;
-        font-size: 0.8em;
-        justify-content: center;
-
+    #menu {
+        height: 15px;
+        gap: 1.8em;
+        margin: 13px auto 0px;
+        font-size: 95%;
     }
 
-    #logo {
-        justify-content: center;
-        margin: 35px auto auto;
-        text-align: center;
-    }
 }
